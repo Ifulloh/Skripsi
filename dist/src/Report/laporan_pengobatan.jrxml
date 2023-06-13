@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="1080" pageHeight="595" orientation="Landscape" columnWidth="1040" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="0.8264462809917354"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     pengobatan_hewan.`no` AS pengobatan_hewan_no,
+     pengobatan_hewan.`tanggal` AS pengobatan_hewan_tanggal,
+     pengobatan_hewan.`nama_pemilik` AS pengobatan_hewan_nama_pemilik,
+     pengobatan_hewan.`id_dokter` AS pengobatan_hewan_id_dokter,
+     pengobatan_hewan.`nama_dokter` AS pengobatan_hewan_nama_dokter,
+     pengobatan_hewan.`jenis_hewan` AS pengobatan_hewan_jenis_hewan,
+     pengobatan_hewan.`keluhan` AS pengobatan_hewan_keluhan,
+     pengobatan_hewan.`diagnosa` AS pengobatan_hewan_diagnosa,
+     pengobatan_hewan.`obat` AS pengobatan_hewan_obat,
+     pengobatan_hewan.`nama_obat` AS pengobatan_hewan_nama_obat,
+     pengobatan_hewan.`jenis_obat` AS pengobatan_hewan_jenis_obat,
+     pengobatan_hewan.`vaksin` AS pengobatan_hewan_vaksin,
+     pengobatan_hewan.`nama_vaksin` AS pengobatan_hewan_nama_vaksin,
+     pengobatan_hewan.`jenis_vaksin` AS pengobatan_hewan_jenis_vaksin,
+     pengobatan_hewan.`total_harga` AS pengobatan_hewan_total_harga,
+     pengobatan_hewan.`bayar` AS pengobatan_hewan_bayar,
+     pengobatan_hewan.`kembali` AS pengobatan_hewan_kembali
+FROM
+     `pengobatan_hewan` pengobatan_hewan]]>
+	</queryString>
+	<field name="pengobatan_hewan_no" class="java.lang.Integer"/>
+	<field name="pengobatan_hewan_tanggal" class="java.lang.String"/>
+	<field name="pengobatan_hewan_nama_pemilik" class="java.lang.String"/>
+	<field name="pengobatan_hewan_id_dokter" class="java.lang.String"/>
+	<field name="pengobatan_hewan_nama_dokter" class="java.lang.String"/>
+	<field name="pengobatan_hewan_jenis_hewan" class="java.lang.String"/>
+	<field name="pengobatan_hewan_keluhan" class="java.lang.String"/>
+	<field name="pengobatan_hewan_diagnosa" class="java.lang.String"/>
+	<field name="pengobatan_hewan_obat" class="java.lang.String"/>
+	<field name="pengobatan_hewan_nama_obat" class="java.lang.String"/>
+	<field name="pengobatan_hewan_jenis_obat" class="java.lang.String"/>
+	<field name="pengobatan_hewan_vaksin" class="java.lang.String"/>
+	<field name="pengobatan_hewan_nama_vaksin" class="java.lang.String"/>
+	<field name="pengobatan_hewan_jenis_vaksin" class="java.lang.String"/>
+	<field name="pengobatan_hewan_total_harga" class="java.lang.Integer"/>
+	<field name="pengobatan_hewan_bayar" class="java.lang.String"/>
+	<field name="pengobatan_hewan_kembali" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="177" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="1040" height="151" forecolor="#000000" backcolor="#CC0000"/>
+				<staticText>
+					<reportElement style="SubTitle" mode="Transparent" x="361" y="45" width="316" height="50" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Times New Roman" size="36" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[Juanda Petshop]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="247" y="95" width="563" height="25" forecolor="#000000"/>
+					<textElement>
+						<font size="16" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Jln.Ir H Juanda No.20, Kemiri Muka, Kecamatan Beji, Kota Depok, Jawa Barat 16423]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="247" y="120" width="563" height="25" forecolor="#000000"/>
+					<textElement textAlignment="Center">
+						<font size="16" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Telp : (021) 77216880]]></text>
+				</staticText>
+				<image>
+					<reportElement x="36" y="20" width="200" height="50"/>
+					<imageExpression><![CDATA[new javax.swing.ImageIcon(getClass().getResource("/Gambar/Logo Fix.jpg")).getImage()]]></imageExpression>
+				</image>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="145" width="1040" height="31" forecolor="#D0B48E" backcolor="#000000"/>
+				<staticText>
+					<reportElement style="Column header" mode="Transparent" x="247" y="0" width="563" height="31" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+						<font fontName="Times New Roman" size="18" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[Laporan Data Pengobatan Hewan]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" x="2" y="0" width="46" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="48" y="0" width="76" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="229" y="0" width="85" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id Dokter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="314" y="0" width="89" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Dokter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="403" y="0" width="97" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jenis Hewan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="500" y="0" width="71" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Keluhan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="571" y="0" width="57" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dignosa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="628" y="0" width="71" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Obat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="699" y="0" width="81" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Vaksin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="780" y="0" width="88" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="868" y="0" width="74" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="942" y="0" width="100" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kembali]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="124" y="0" width="105" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Pemilik]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="2" y="0" width="46" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_no}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="48" y="0" width="76" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_tanggal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="229" y="0" width="85" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_id_dokter}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="314" y="0" width="89" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_nama_dokter}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="402" y="0" width="98" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_jenis_hewan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="500" y="0" width="71" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_keluhan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="571" y="0" width="57" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_diagnosa}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="628" y="0" width="71" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_nama_obat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="124" y="0" width="105" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_nama_pemilik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="699" y="0" width="81" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_nama_vaksin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="780" y="0" width="88" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_total_harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="868" y="0" width="74" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_bayar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="940" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_kembali}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="153" splitType="Stretch">
+			<staticText>
+				<reportElement x="883" y="19" width="37" height="20"/>
+				<textElement/>
+				<text><![CDATA[Depok,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="920" y="19" width="133" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMMM yyyy",
+new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="920" y="122" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(    Yustian   )]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="920" y="57" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Kepala Toko]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

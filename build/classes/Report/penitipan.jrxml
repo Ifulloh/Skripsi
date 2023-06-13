@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="450" pageHeight="648" columnWidth="410" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.1000000000000019"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="no_penitipan" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     transaksi_penitipan.`no_penitipan` AS transaksi_penitipan_no_penitipan,
+     transaksi_penitipan.`tgl_masuk` AS transaksi_penitipan_tgl_masuk,
+     transaksi_penitipan.`tgl_keluar` AS transaksi_penitipan_tgl_keluar,
+     transaksi_penitipan.`hari` AS transaksi_penitipan_hari,
+     transaksi_penitipan.`nama_pemilik` AS transaksi_penitipan_nama_pemilik,
+     transaksi_penitipan.`jenis_hewan` AS transaksi_penitipan_jenis_hewan,
+     transaksi_penitipan.`jenis_paket` AS transaksi_penitipan_jenis_paket,
+     transaksi_penitipan.`keterangan` AS transaksi_penitipan_keterangan,
+     transaksi_penitipan.`total_harga` AS transaksi_penitipan_total_harga,
+     transaksi_penitipan.`bayar` AS transaksi_penitipan_bayar,
+     transaksi_penitipan.`kembali` AS transaksi_penitipan_kembali,
+     transaksi_penitipan.`tgl_transaksi` AS transaksi_penitipan_tgl_transaksi
+FROM
+     `transaksi_penitipan` transaksi_penitipan
+WHERE
+	no_penitipan=$P{no_penitipan}]]>
+	</queryString>
+	<field name="transaksi_penitipan_no_penitipan" class="java.lang.Integer"/>
+	<field name="transaksi_penitipan_tgl_masuk" class="java.lang.String"/>
+	<field name="transaksi_penitipan_tgl_keluar" class="java.sql.Date"/>
+	<field name="transaksi_penitipan_hari" class="java.lang.Integer"/>
+	<field name="transaksi_penitipan_nama_pemilik" class="java.lang.String"/>
+	<field name="transaksi_penitipan_jenis_hewan" class="java.lang.String"/>
+	<field name="transaksi_penitipan_jenis_paket" class="java.lang.String"/>
+	<field name="transaksi_penitipan_keterangan" class="java.lang.String"/>
+	<field name="transaksi_penitipan_total_harga" class="java.lang.String"/>
+	<field name="transaksi_penitipan_bayar" class="java.lang.String"/>
+	<field name="transaksi_penitipan_kembali" class="java.lang.String"/>
+	<field name="transaksi_penitipan_tgl_transaksi" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="2" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="2" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="2" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="548" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="11" width="403" height="530"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="167" y="26" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Juand Petshop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="46" width="393" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Jln.Ir H Juanda No.20, Kemiri Muka, Kecamatan Beji, Kota Depok, Jawa Barat 16423]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="77" width="436" height="20"/>
+				<textElement/>
+				<text><![CDATA[=====================================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="136" width="436" height="20"/>
+				<textElement/>
+				<text><![CDATA[=====================================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="362" width="436" height="20"/>
+				<textElement/>
+				<text><![CDATA[=====================================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="430" width="436" height="20"/>
+				<textElement/>
+				<text><![CDATA[=====================================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="471" width="436" height="20"/>
+				<textElement/>
+				<text><![CDATA[=====================================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="491" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Terima Kasih]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="511" width="205" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Kritik dan Saran Hubungi Juanda Petshop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="111" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tanggal Transaksi]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="111" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_penitipan_tgl_transaksi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="165" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[No Penitipan]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="165" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_penitipan_no_penitipan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="196" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jumlah]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="196" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_penitipan_hari}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="226" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Pemilik]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="226" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_penitipan_nama_pemilik}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="261" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jenis Hewan]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="261" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_penitipan_jenis_hewan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="294" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jenis Paket]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="294" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_penitipan_jenis_paket}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="332" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="332" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_penitipan_keterangan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="385" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Total Harga]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="385" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_penitipan_total_harga}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="410" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Total Bayar]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="410" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_penitipan_bayar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="451" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kembali]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="451" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{transaksi_penitipan_kembali}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="2" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="1" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="1" splitType="Stretch"/>
+	</summary>
+</jasperReport>

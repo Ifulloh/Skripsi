@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="432" pageHeight="648" columnWidth="392" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.000000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="no" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     pengobatan_hewan.`no` AS pengobatan_hewan_no,
+     pengobatan_hewan.`tanggal` AS pengobatan_hewan_tanggal,
+     pengobatan_hewan.`nama_pemilik` AS pengobatan_hewan_nama_pemilik,
+     pengobatan_hewan.`id_dokter` AS pengobatan_hewan_id_dokter,
+     pengobatan_hewan.`nama_dokter` AS pengobatan_hewan_nama_dokter,
+     pengobatan_hewan.`jenis_hewan` AS pengobatan_hewan_jenis_hewan,
+     pengobatan_hewan.`keluhan` AS pengobatan_hewan_keluhan,
+     pengobatan_hewan.`diagnosa` AS pengobatan_hewan_diagnosa,
+     pengobatan_hewan.`obat` AS pengobatan_hewan_obat,
+     pengobatan_hewan.`nama_obat` AS pengobatan_hewan_nama_obat,
+     pengobatan_hewan.`jenis_obat` AS pengobatan_hewan_jenis_obat,
+     pengobatan_hewan.`vaksin` AS pengobatan_hewan_vaksin,
+     pengobatan_hewan.`nama_vaksin` AS pengobatan_hewan_nama_vaksin,
+     pengobatan_hewan.`jenis_vaksin` AS pengobatan_hewan_jenis_vaksin,
+     pengobatan_hewan.`total_harga` AS pengobatan_hewan_total_harga,
+     pengobatan_hewan.`bayar` AS pengobatan_hewan_bayar,
+     pengobatan_hewan.`kembali` AS pengobatan_hewan_kembali
+FROM
+     `pengobatan_hewan` pengobatan_hewan
+WHERE
+	no=$P{no}]]>
+	</queryString>
+	<field name="pengobatan_hewan_no" class="java.lang.Integer"/>
+	<field name="pengobatan_hewan_tanggal" class="java.lang.String"/>
+	<field name="pengobatan_hewan_nama_pemilik" class="java.lang.String"/>
+	<field name="pengobatan_hewan_id_dokter" class="java.lang.String"/>
+	<field name="pengobatan_hewan_nama_dokter" class="java.lang.String"/>
+	<field name="pengobatan_hewan_jenis_hewan" class="java.lang.String"/>
+	<field name="pengobatan_hewan_keluhan" class="java.lang.String"/>
+	<field name="pengobatan_hewan_diagnosa" class="java.lang.String"/>
+	<field name="pengobatan_hewan_obat" class="java.lang.String"/>
+	<field name="pengobatan_hewan_nama_obat" class="java.lang.String"/>
+	<field name="pengobatan_hewan_jenis_obat" class="java.lang.String"/>
+	<field name="pengobatan_hewan_vaksin" class="java.lang.String"/>
+	<field name="pengobatan_hewan_nama_vaksin" class="java.lang.String"/>
+	<field name="pengobatan_hewan_jenis_vaksin" class="java.lang.String"/>
+	<field name="pengobatan_hewan_total_harga" class="java.lang.Integer"/>
+	<field name="pengobatan_hewan_bayar" class="java.lang.String"/>
+	<field name="pengobatan_hewan_kembali" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="1" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="1" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="574" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="3" width="403" height="560"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="167" y="25" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Juand Petshop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="45" width="393" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Jln.Ir H Juanda No.20, Kemiri Muka, Kecamatan Beji, Kota Depok, Jawa Barat 16423]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="76" width="436" height="20"/>
+				<textElement/>
+				<text><![CDATA[=====================================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="135" width="436" height="20"/>
+				<textElement/>
+				<text><![CDATA[=====================================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="403" width="436" height="20"/>
+				<textElement/>
+				<text><![CDATA[=====================================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="459" width="436" height="20"/>
+				<textElement/>
+				<text><![CDATA[=====================================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="503" width="436" height="20"/>
+				<textElement/>
+				<text><![CDATA[=====================================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="144" y="523" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Terima Kasih]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="543" width="205" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Kritik dan Saran Hubungi Juanda Petshop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="110" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tanggal Transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="167" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="167" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_no}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="27" y="196" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Pemilik]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="196" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_nama_pemilik}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="28" y="227" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Dokter]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="227" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_nama_dokter}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="28" y="259" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jenis Hewan]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="259" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_jenis_hewan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="28" y="288" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Keluhan]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="288" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_keluhan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="28" y="320" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Diagnosa]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="320" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_diagnosa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="27" y="350" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Obat]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="350" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_nama_obat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="28" y="380" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Vaksin]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="380" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_nama_vaksin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="110" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_tanggal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="27" y="419" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Total Harga]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="419" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_total_harga}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="27" y="445" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Total Bayar]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="444" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_bayar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="28" y="483" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kembali]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="483" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pengobatan_hewan_kembali}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="1" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="1" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="1" splitType="Stretch"/>
+	</summary>
+</jasperReport>
